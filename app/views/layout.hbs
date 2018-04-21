@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris Alhuriah</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="/dashboard" class="logo"><b>Inventaris Alhuriah</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                {{!-- kolo mau naruh di top-bar --}}
+            </div>
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/logout">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              	  <h5 class="centered">{{ nama }}</h5>
+                  <h6 class="centered">{{ role }}</h6>		
+                  
+                  <hr>
+                  <hr>
+
+                  <li class="sub-menu">
+                      <a href="/index/transaksi">
+                          <i class="material-icons">sort</i>
+                          <span>Daftar transaksi</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="/index/rusak">
+                          <i class="material-icons">assignment</i>
+                          <span>Daftar barang rusak</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="/index/barang">
+                          <i class="material-icons">assignment</i>
+                          <span>Daftar barang</span>
+                      </a>
+                  </li>
+
+                   <li class="sub-menu">
+                      <a href="/index/jenis-barang">
+                          <i class="material-icons">assignment</i>
+                          <span>Daftar jenis barang</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="/index/user">
+                          <i class="material-icons">face</i>
+                          <span>Daftar penguna</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="/index/log">
+                          <i class="material-icons">sort</i>
+                          <span>Daftar log</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="material-icons">library_add</i>
+                          <span>Tambah</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="/tambah/jenis-barang">Jenis barang</a></li>
+                          <li><a  href="/tambah/barang">Barang</a></li>
+                          <li><a  href="/tambah/user">Penguna</a></li>
+                          <li><a  href="/tambah/transaksi">Lakukan peminjaman</a></li>
+                      </ul>
+                  </li>
+
+                  {{!-- </li>
+                  <li class="sub-menu">
+                      <a href="/profil/{{ id_user }}">
+                          <i class="material-icons">settings_applications</i>
+                          <span>Pengaturan</span>
+                      </a>
+                  </li> --}}
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+          	{{!-- tempat kontennya --}}
+			{{{ body }}}
+		</section><! --/wrapper -->
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2017 - SI BERKAH
+              <a href="blank.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="/assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    
+
+    <!--common script for all pages-->
+    <script src="/assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+  </body>
+</html>

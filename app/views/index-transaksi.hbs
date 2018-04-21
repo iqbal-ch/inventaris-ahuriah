@@ -1,0 +1,36 @@
+{{!< layout }}
+    <div class="row mt">
+			  		<div class="col-lg-12">
+                      <div class="content-panel">
+                      <h4><i class="fa fa-angle-right"></i>Index transaksi</h4>
+                          <section id="unseen">
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                              <tr>
+                                  <th>id</th>
+                                  <th class="numeric">id_user</th>
+                                  <th class="numeric">id_barang</th>
+                                  <th class="numeric">role</th>
+                                  <th class="numeric">tanggal transaksi</th>
+                                  <th> Opsi </th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                            {{#each transaksis}}
+                              <tr>
+                                  <td class="numeric">{{ id }}</td>
+                                  <td class="numeric">{{ id_user }}</td>
+                                  <td class="numeric">{{ id_barang}}</td>
+                                  <td class="numeric">{{ role }}</td>
+                                  <td class="numeric">{{ createdAt }}</td>
+                                  <td>
+                                      <a href="/detail/transaksi/{{ id }}" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
+                                  </td>
+                              </tr>
+                            {{/each}}
+                              </tbody>
+                          </table>
+                          </section>
+                  </div><!-- /content-panel -->
+               </div><!-- /col-lg-4 -->			
+		  	</div>

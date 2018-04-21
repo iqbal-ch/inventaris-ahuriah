@@ -1,0 +1,38 @@
+{{!< layout }}
+    <div class="row mt">
+			  		<div class="col-lg-12">
+                      <div class="content-panel">
+                      <h4><i class="fa fa-angle-right"></i>Daftar log harian </h4>
+                          <section id="unseen">
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                              <tr>
+                                  <th>ID</th>
+                                  <th class="numeric">ID pengguna</th>
+                                  <th class="numeric">ID barang</th>
+                                  <th class="numeric">ID jenis barang</th>
+                                  <th class="numeric">ID transaksi</th>
+                                  <th class="numeric">Jumlah barang</th>
+                                  <th class="numeric">Role</th>
+                                  <th class="numeric">Tanggal log</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                            {{#each logs}}
+                              <tr>
+                                  <td class="numeric">{{ id }}</td>
+                                  <td class="numeric">{{ id_user }}</td>
+                                  <td class="numeric">{{ id_barang}}</td>
+                                  <td class="numeric">{{ id_jenis_barang}}</td>
+                                  <td class="numeric">{{ id_transaksi }}</td>
+                                  <td class="numeric">{{ jumlah }}</td>
+                                  <td class="numeric">{{ role }}</td>
+                                  <td class="numeric">{{ createdAt }}</td>
+                              </tr>
+                            {{/each}}
+                              </tbody>
+                          </table>
+                          </section>
+                  </div><!-- /content-panel -->
+               </div><!-- /col-lg-4 -->			
+		  	</div>

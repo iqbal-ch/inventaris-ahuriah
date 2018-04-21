@@ -1,0 +1,54 @@
+{{!< layout }}
+<div class="form-panel">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Silahkan updaate form berikut untuk mengupdate barang :</h4>
+                      <form class="form-horizontal style-form" method="post" action="/update/user?_method=put" >
+                          
+                          <input type="hidden" name="id" value="{{user.id}}">
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Update role user:</label>
+                              <div class="col-sm-10">
+                                  <select class="form-control" id="role" name="role"> 
+                                        <option value="admin">admin </option>
+                                        <option value="basic">basic</option>
+						          </select>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Nama :</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="nama" name="nama" value="{{user.nama}}">
+                              </div>
+                          </div>
+    
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Email :</label>
+                              <div class="col-sm-10">
+                                  <input type="email" class="form-control" name="email"  value="{{user.email}}">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">No telepon:</label>
+                              <div class="col-sm-10">
+                                  <input type="number" class="form-control" name="no_telepon"  value="{{user.no_telepon}}">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Alamat :</label>
+                              <div class="col-sm-10">
+                                  <textarea class="form-control" name="alamat" >{{user.alamat}}</textarea>
+                              </div>
+                          </div> 
+
+                          <div class="form-group">
+                              <div class="col-sm-12 ">
+                                  <button type="submit" class="btn btn-primary pull-right">UPDATE</button>
+                              </div>
+                          </div>
+                          
+                      </form>
+                  </div>
+
